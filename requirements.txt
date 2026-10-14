@@ -1,0 +1,3 @@
+# Dependência opcional (apenas para gerar os gráficos PNG).
+# O simulador e os testes funcionam sem ela (usam só a biblioteca padrão).
+matplotlib>=3.7

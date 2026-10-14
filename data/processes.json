@@ -1,0 +1,16 @@
+{
+  "descricao": "Processos do cenário MedControl Systems (1 CPU). Menor número de prioridade = maior prioridade.",
+  "processos": [
+    {"pid": "P1", "funcao": "Monitoramento cardíaco",   "chegada": 0, "burst": 8,  "prioridade": 1, "memoria_mb": 120, "dispositivos": ["rede"]},
+    {"pid": "P2", "funcao": "Transmissão de telemetria", "chegada": 1, "burst": 4,  "prioridade": 2, "memoria_mb": 80,  "dispositivos": ["rede"]},
+    {"pid": "P3", "funcao": "Geração de relatórios",     "chegada": 2, "burst": 9,  "prioridade": 4, "memoria_mb": 200, "dispositivos": ["disco"]},
+    {"pid": "P4", "funcao": "Emissão de alarme crítico", "chegada": 3, "burst": 2,  "prioridade": 0, "memoria_mb": 60,  "dispositivos": ["audio", "rede"]},
+    {"pid": "P5", "funcao": "Backup do sistema",         "chegada": 5, "burst": 12, "prioridade": 5, "memoria_mb": 300, "dispositivos": ["disco"]},
+    {"pid": "P6", "funcao": "Atualização de dados",      "chegada": 6, "burst": 6,  "prioridade": 3, "memoria_mb": 150, "dispositivos": ["disco", "rede"]}
+  ],
+  "quantum": 3,
+  "memoria": {
+    "frames": 4,
+    "referencias": [1, 2, 3, 4, 1, 2, 5, 1, 2, 3, 4, 5, 2, 1, 5, 3, 2]
+  }
+}
